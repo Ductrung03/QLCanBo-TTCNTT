@@ -9,6 +9,10 @@ import UserList from "../pages/UserList";
 import BangCapList from "../pages/QuanLyBangCap/BangCapList";
 import BangCapFormPage from "../pages/QuanLyBangCap/BangCapFormPage";
 import BangCapDetail from "@/pages/QuanLyBangCap/BangCapDetail";
+import BangLuongList from "../pages/QuanLyLuong/BangLuongList";
+import BangLuongFormPage from "../pages/QuanLyLuong/BangLuongFormPage";
+import BangLuongDetail from "../pages/QuanLyLuong/BangLuongDetail";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +27,9 @@ export const router = createBrowserRouter([
       { path: "/bangcap", element: <BangCapList /> },
       { path: "/bangcap/form", element: <BangCapFormPage /> },
       { path: "/bangcap/view/:id", element: <BangCapDetail /> },
+      { path: "/bangluong", element: <BangLuongList /> },
+      { path: "/bangluong/form", element: <BangLuongFormPage /> },
+      { path: "/bangluong/view/:id", element: <BangLuongDetail /> },
     ],
   },
   { path: "/login", element: <Login /> },

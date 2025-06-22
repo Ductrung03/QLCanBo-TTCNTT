@@ -35,7 +35,7 @@ const Sidebar = () => {
     { path: "/", label: "Quản lý hoạt động giảng dạy" },
     { path: "/", label: "Quản lý hoạt động NCKH" },
     { path: "/", label: "Quản lý y tế, sức khỏe cán bộ" },
-    { path: "/", label: "Quản lý tiền lương theo bậc, chức vụ" },
+    { path: "/bangluong", label: "Quản lý tiền lương theo bậc, chức vụ" },
   ];
   return (
     <div className="w-64 bg-blue-700 text-white min-h-screen p-4">

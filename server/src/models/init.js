@@ -8,6 +8,8 @@ const Loai_BC = require("./Loai_BC");
 const DonVi = require("./DonVi");
 const QuaTrinhCongTac = require("./QuaTrinhCongTac");
 const LichSuThayDoi_BC = require("./LichSuThayDoi_BC");
+const BangLuong = require("./BangLuong");
+const MucLuongCapBac = require("./MucLuongCapBac");
 
 // User-Role
 User.belongsToMany(Role, { through: Role_User, foreignKey: "UserId" });
@@ -30,6 +32,10 @@ BangCap.belongsTo(Loai_BC, { foreignKey: "MaLBC" });
 BangCap.hasMany(LichSuThayDoi_BC, { foreignKey: "MaBC" });
 LichSuThayDoi_BC.belongsTo(BangCap, { foreignKey: "MaBC" });
 
+// BangLuong relationships
+BangLuong.belongsTo(CanBo, { foreignKey: "MaCB" });
+CanBo.hasMany(BangLuong, { foreignKey: "MaCB" });
+
 module.exports = {
   User,
   Role,
@@ -40,4 +46,6 @@ module.exports = {
   Loai_BC,
   QuaTrinhCongTac,
   LichSuThayDoi_BC,
+  BangLuong,
+  MucLuongCapBac,
 };
